@@ -1,0 +1,152 @@
+[
+    {
+      "name": "HAVIT HV-G92 Gamepad",
+      "price": "120",
+      "oldPrice": "160",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/gamepad.png",
+      "discount": "-40%",
+      "views": "88",
+      "ratingValue": 5,
+      "ratingCount": 1,
+      "averageRating": 5
+    },
+    {
+      "name": "AK-900 Wired Keyboard",
+      "price": "960",
+      "oldPrice": "1160",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/klava.png",
+      "discount": "-35%",
+      "views": "75",
+      "ratingValue": 4,
+      "ratingCount": 1,
+      "averageRating": 4
+    },
+    {
+      "name": "IPS LCD Gaming Monitor",
+      "price": "370",
+      "oldPrice": "400",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/windo.png",
+      "discount": "-30%",
+      "views": "99",
+      "ratingValue": 5,
+      "ratingCount": 1,
+      "averageRating": 5
+    },
+    {
+      "name": "S-Series Comfort Chair",
+      "price": "375",
+      "oldPrice": "400",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/ctul.png",
+      "discount": "-25%",
+      "views": "99",
+      "ratingValue": 4.5,
+      "ratingCount": 1,
+      "averageRating": 4.5
+    },
+    {
+      "name": "Breed Dry Dog Food",
+      "price": "100",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/dogfood.png",
+      "views": "35",
+      "ratingValue": 3,
+      "ratingCount": 1,
+      "averageRating": 3
+    },
+    {
+      "name": "CANON EOS DSLR Camera",
+      "price": "360",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/camera.png",
+      "views": "95",
+      "ratingValue": 4,
+      "ratingCount": 1,
+      "averageRating": 4
+    },
+    {
+      "name": "ASUS FHD Gaming Laptop",
+      "price": "700",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/laptop.png",
+      "views": "325",
+      "ratingValue": 5,
+      "ratingCount": 1,
+      "averageRating": 5
+    },
+    {
+      "name": "Curology Product Set",
+      "price": "500",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/shampun.png",
+      "views": "145",
+      "ratingValue": 4,
+      "ratingCount": 1,
+      "averageRating": 4
+    },
+    {
+      "name": "Kids Electric Car",
+      "price": "960",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/car.png",
+      "views": "65",
+      "ratingValue": 5,
+      "ratingCount": 1,
+      "averageRating": 5
+    },
+    {
+      "name": "Jr. Zoom Soccer Cleats",
+      "price": "1160",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/boot.png",
+      "views": "35",
+      "ratingValue": 5,
+      "ratingCount": 1,
+      "averageRating": 5
+    },
+    {
+      "name": "GP11 Shooter USB Gamepad",
+      "price": "660",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/blackgamepad.png",
+      "views": "55",
+      "ratingValue": 4.5,
+      "ratingCount": 1,
+      "averageRating": 4.5
+    },
+    {
+      "name": "Quilted Satin Jacket",
+      "price": "660",
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/jacket.png",
+      "views": "55",
+      "ratingValue": 4.5,
+      "ratingCount": 1,
+      "averageRating": 4.5
+    },
+    {
+      "name": "Iphone 15",
+      "price": 1000,
+      "groupId": "phone",
+      "categoryId": "electric",
+      "image": "images/klava.png",
+      "ratingValue": 0,
+      "ratingCount": 1,
+      "averageRating": 0
+    }
+  ]
