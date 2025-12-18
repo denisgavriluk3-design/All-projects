@@ -1,44 +1,63 @@
 import { create } from "zustand";
 
+const storageKey = "cart-data";
+
+const loadCart = () => {
+  try {
+    const stored = localStorage.getItem(storageKey);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
+const saveCart = (cart) => {
+  localStorage.setItem(storageKey, JSON.stringify(cart));
+};
+
 export const useStore = create((set, get) => ({
-  cart: [],
+  cart: loadCart(),
 
   addToCart: (product) =>
     set((state) => {
       const productId = product._id || product.id;
       const existing = state.cart.find((p) => (p._id || p.id) === productId);
-      if (existing) {
-        return {
-          cart: state.cart.map((p) =>
+      let newCart = existing
+        ? state.cart.map((p) =>
             (p._id || p.id) === productId ? { ...p, count: p.count + 1 } : p
-          ),
-        };
-      } else {
-        return { cart: [...state.cart, { ...product, count: 1 }] };
-      }
+          )
+        : [...state.cart, { ...product, count: 1 }];
+
+      saveCart(newCart);
+      return { cart: newCart };
     }),
 
-  removeFromCart: (id) =>
-    set((state) => ({ 
-      cart: state.cart.filter((p) => (p._id || p.id) !== id) 
-    })),
+  removeFromCart: (id) => {
+    const newCart = get().cart.filter((p) => (p._id || p.id) !== id);
+    saveCart(newCart);
+    return set({ cart: newCart });
+  },
 
-  clearCart: () => set({ cart: [] }),
+  clearCart: () => {
+    saveCart([]);
+    set({ cart: [] });
+  },
 
-  increaseCount: (id) =>
-    set((state) => ({
-      cart: state.cart.map((p) =>
-        (p._id || p.id) === id ? { ...p, count: p.count + 1 } : p
-      ),
-    })),
+  increaseCount: (id) => {
+    const newCart = get().cart.map((p) =>
+      (p._id || p.id) === id ? { ...p, count: p.count + 1 } : p
+    );
+    saveCart(newCart);
+    set({ cart: newCart });
+  },
 
-  decreaseCount: (id) =>
-    set((state) => ({
-      cart: state.cart.map((p) =>
-        (p._id || p.id) === id ? { ...p, count: p.count > 1 ? p.count - 1 : 1 } : p
-      ),
-    })),
+  decreaseCount: (id) => {
+    const newCart = get().cart.map((p) =>
+      (p._id || p.id) === id ? { ...p, count: p.count > 1 ? p.count - 1 : 1 } : p
+    );
+    saveCart(newCart);
+    set({ cart: newCart });
+  },
 
-  getTotal: () =>
-    get().cart.reduce((sum, item) => sum + item.price * item.count, 0),
+  getTotal: () => get().cart.reduce((sum, item) => sum + item.price * item.count, 0),
 }));
