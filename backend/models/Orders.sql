@@ -1,0 +1,11 @@
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+
+  user_id INT NOT NULL,
+
+  status TEXT DEFAULT 'pending',
+  total NUMERIC DEFAULT 0,
+
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
